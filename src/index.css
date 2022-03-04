@@ -4,3 +4,9 @@ htnl{
 body{
   margin: 0;
 }
+.todolist,ul{
+  display: grid;
+  align-items: center;
+  justify-items: center;
+  margin: 100px;
+}

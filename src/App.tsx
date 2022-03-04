@@ -13,11 +13,17 @@ const App: React.FC=() =>{
       ...prevTodos,
     {id: Math.random().toString(), text:text},]);
   }
+
+  const todoDeleteHandler=(todoId: string)=>{
+    setTodos((prevTodos)=>{
+      return prevTodos.filter((todo)=> todo.id !== todoId)
+    })
+  }
 return (
 <div className="App"> 
 {/* A component that adds todos */} 
 <NewTodo onAddTodo={todoAddHandler}/>
-<TodoList items={todos} />
+<TodoList items={todos} onDeleteTodo={todoDeleteHandler} />
 
   </div>
   )
