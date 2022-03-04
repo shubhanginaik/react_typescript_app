@@ -1,18 +1,20 @@
 import React from 'react';
 import TodoList from './components/TodoList';
+import NewTodo from './components/NewTodo';
 
-// function App() {
-//   return (
-//     <div className="App">
-      
-      
-//     </div>
-//   );
-// }
 const App: React.FC=() =>{
-return <div className="App">  
-<TodoList />
+  const todos= [{id:'t1', text: 'Walk 10km'}];
+  const todoAddHandler = (text:string) => {
+    console.log(text);
+  }
+return (
+<div className="App"> 
+{/* A component that adds todos */} 
+<NewTodo />
+<TodoList items={todos} />
+
   </div>
+  )
 }
 
 export default App;
