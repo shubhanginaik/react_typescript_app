@@ -10,8 +10,12 @@ const NewTodo: React.FC<NewTodoProps> = (props) =>{
     const todoSubmitHandler =(event:React.FormEvent) =>{
         event.preventDefault();
         const enteredText=textInputRef.current!.value
-        console.log(enteredText)
+    if(enteredText.length>0){
         props.onAddTodo(enteredText);
+        textInputRef.current!.value='';
+    } else{
+        alert('Enter something!')
+    }
     };
     return <form  onSubmit={todoSubmitHandler}>
         <div className="form-control"> 
