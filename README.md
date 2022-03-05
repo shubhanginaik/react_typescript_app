@@ -1,4 +1,4 @@
-# to do app with react-typescript
+This repo contains the react-typescript assignment as part of the Full Stack Web Development Program at [Business College Helsinki](http://bc.fi).
 
 # Getting Started with Create React App
 1.npx create-react-app@5.0.0 . --template typescript
