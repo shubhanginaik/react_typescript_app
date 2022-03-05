@@ -1,3 +1,5 @@
+# to do app with react-typescript
+
 # Getting Started with Create React App
 1.npx create-react-app@5.0.0 . --template typescript
 
